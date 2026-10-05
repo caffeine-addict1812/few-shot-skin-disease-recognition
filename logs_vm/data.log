@@ -1,0 +1,12 @@
+resyhgerwshshgdfghsdfgh/SD-198 @ 68c02939c06d6850f40f2911e1d1d49bd760139d (gated=False)
+zip: /root/DL/data/raw/sd-198.zip 1.233 GiB
+sha256: 71bf8d783c72c68add6cafae17e09b7f54e966c7f86efce9c86c903e1dd96858 
+md5:    1facac8850572a39798db63ca0f57a4b
+sha256 matches the HF LFS hash for this revision
+extracting 6986 entries -> data/SD-198-raw
+wrote data/download_info.json
+6584 images in 198 classes -> data/SD-198-256
+{'done': 6584}
+198 classes / 6584 images, filelist sha256 4a06adc3b23a53b8...
+VERIFY OK
+EXIT=0

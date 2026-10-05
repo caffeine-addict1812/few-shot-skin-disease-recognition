@@ -1,0 +1,152 @@
+{
+  "method": "transductive soft k-means prototypes",
+  "T": 8,
+  "temperature": 10.0,
+  "selected_on": "validation",
+  "results": {
+    "5way_1shot": {
+      "frozen_standard": {
+        "acc": 62.72666666666667,
+        "ci95": 1.0989982005143664
+      },
+      "frozen_transductive": {
+        "acc": 68.46,
+        "ci95": 1.3070417068901672
+      },
+      "seed42_standard": {
+        "acc": 70.66,
+        "ci95": 1.0250399444203169
+      },
+      "seed42_transductive": {
+        "acc": 77.31333333333333,
+        "ci95": 1.2742625536000527
+      },
+      "seed43_standard": {
+        "acc": 70.70666666666666,
+        "ci95": 1.0469632145996877
+      },
+      "seed43_transductive": {
+        "acc": 77.37333333333333,
+        "ci95": 1.2866143868325028
+      },
+      "seed44_standard": {
+        "acc": 70.68666666666667,
+        "ci95": 1.0337335224356228
+      },
+      "seed44_transductive": {
+        "acc": 77.24666666666667,
+        "ci95": 1.2605256087083707
+      },
+      "trained_standard": 70.68444444444445,
+      "trained_transductive": 77.31111111111112
+    },
+    "5way_5shot": {
+      "frozen_standard": {
+        "acc": 80.20666666666666,
+        "ci95": 0.8452398628212562
+      },
+      "frozen_transductive": {
+        "acc": 80.98,
+        "ci95": 0.8810618568481186
+      },
+      "seed42_standard": {
+        "acc": 85.78666666666666,
+        "ci95": 0.7483173562301746
+      },
+      "seed42_transductive": {
+        "acc": 86.85333333333334,
+        "ci95": 0.7549613222399402
+      },
+      "seed43_standard": {
+        "acc": 85.87333333333333,
+        "ci95": 0.7516358724071763
+      },
+      "seed43_transductive": {
+        "acc": 86.74,
+        "ci95": 0.7579875750270457
+      },
+      "seed44_standard": {
+        "acc": 85.82,
+        "ci95": 0.759713915519191
+      },
+      "seed44_transductive": {
+        "acc": 86.66666666666667,
+        "ci95": 0.7615742747736639
+      },
+      "trained_standard": 85.82666666666667,
+      "trained_transductive": 86.75333333333333
+    },
+    "2way_1shot": {
+      "frozen_standard": {
+        "acc": 81.31666666666666,
+        "ci95": 1.3880864587861519
+      },
+      "frozen_transductive": {
+        "acc": 86.91666666666667,
+        "ci95": 1.608978973462121
+      },
+      "seed42_standard": {
+        "acc": 86.28333333333333,
+        "ci95": 1.2713347690412244
+      },
+      "seed42_transductive": {
+        "acc": 91.15,
+        "ci95": 1.3610511936357401
+      },
+      "seed43_standard": {
+        "acc": 86.46666666666667,
+        "ci95": 1.2298710463202587
+      },
+      "seed43_transductive": {
+        "acc": 91.38333333333334,
+        "ci95": 1.3462269487677676
+      },
+      "seed44_standard": {
+        "acc": 86.46666666666667,
+        "ci95": 1.2350746948108833
+      },
+      "seed44_transductive": {
+        "acc": 91.41666666666667,
+        "ci95": 1.3308307551975875
+      },
+      "trained_standard": 86.40555555555557,
+      "trained_transductive": 91.31666666666668
+    },
+    "2way_5shot": {
+      "frozen_standard": {
+        "acc": 91.7,
+        "ci95": 0.9434108920807548
+      },
+      "frozen_transductive": {
+        "acc": 92.4,
+        "ci95": 0.9347489320364258
+      },
+      "seed42_standard": {
+        "acc": 94.5,
+        "ci95": 0.7458944949942796
+      },
+      "seed42_transductive": {
+        "acc": 95.15,
+        "ci95": 0.7056625613766532
+      },
+      "seed43_standard": {
+        "acc": 94.7,
+        "ci95": 0.7306634638358002
+      },
+      "seed43_transductive": {
+        "acc": 95.16666666666667,
+        "ci95": 0.6995531870221342
+      },
+      "seed44_standard": {
+        "acc": 94.41666666666667,
+        "ci95": 0.7426331825179002
+      },
+      "seed44_transductive": {
+        "acc": 95.1,
+        "ci95": 0.7207063683977558
+      },
+      "trained_standard": 94.53888888888889,
+      "trained_transductive": 95.13888888888887
+    }
+  }
+}

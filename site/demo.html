@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo · SD-198 Few-Shot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/demo.css">
+</head>
+<body class="demo">
+<nav class="nav dark" aria-label="Site">
+  <div class="nav-in">
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 22 22" aria-hidden="true"><circle cx="6" cy="7" r="2.2" fill="#95a0ba"/><circle cx="15" cy="5" r="1.6" fill="#95a0ba"/><circle cx="11" cy="15" r="3" fill="none" stroke="#ffad55" stroke-width="1.8"/><circle cx="17.5" cy="16.5" r="1.8" fill="#ffad55"/></svg><span>SD-198 Few-Shot</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="hide-sm">Overview</a>
+      <a href="index.html#method" class="hide-sm">Method</a>
+      <a href="index.html#results">Results</a>
+      <a href="demo.html" aria-current="page">Demo</a>
+      <a href="assets/report.pdf" class="cta">Report</a>
+    </div>
+  </div>
+</nav>
+
+<div class="stage" id="stage" aria-label="3-D map of all 6,584 photos in the model's embedding space"></div>
+<div class="morph-badge" id="morphBadge">Layout: <i>trained model</i></div>
+
+<aside class="dock" aria-label="Demo controls">
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tabStory" aria-selected="true" aria-controls="pStory">Story</button>
+    <button role="tab" id="tabExplore" aria-selected="false" aria-controls="pExplore">Explore</button>
+    <button role="tab" id="tabLab" aria-selected="false" aria-controls="pLab">Few-shot lab</button>
+  </div>
+
+  <!-- STORY -->
+  <section class="panel" id="pStory" role="tabpanel" aria-labelledby="tabStory">
+    <div class="row">
+      <button class="dbtn amber" id="sPlay" type="button"><svg viewBox="0 0 16 16" aria-hidden="true" id="sPlayIcon"><path d="M4 2.5v11l9.5-5.5z"/></svg><span id="sPlayTxt">Pause</span></button>
+      <button class="dbtn" id="sPrev" type="button" aria-label="Previous step"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M11 2.5v11L3.5 8z"/></svg></button>
+      <button class="dbtn" id="sNext" type="button" aria-label="Next step"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 2.5v11L12.5 8z"/></svg></button>
+      <button class="dbtn" id="sRestart" type="button">Restart</button>
+    </div>
+    <button class="dbtn amber" id="sPresent" type="button" style="justify-self:start"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12v8H2zM6 13h4"/></svg>Present full screen</button>
+    <div class="progress" aria-hidden="true"><i id="sBar"></i></div>
+    <ol class="steps" id="steps"></ol>
+    <p class="note">The story plays by itself, which suits presenting to a room or recording a video. Keys: <strong>P</strong> present, <strong>Space</strong> pause, <strong>&larr; &rarr;</strong> step, <strong>Esc</strong> leave. Drag the galaxy any time to look around.</p>
+  </section>
+
+  <!-- EXPLORE -->
+  <section class="panel" id="pExplore" role="tabpanel" aria-labelledby="tabExplore" hidden>
+    <h2>Explore the space</h2>
+    <p>Drag to rotate, scroll or pinch to zoom. Hover a dot to see its photo; click it to fly to its disease.</p>
+    <div style="display:grid;gap:6px">
+      <label class="morph-ends" for="morph"><span id="endA">ImageNet features only</span><span id="endB" class="on">After episodic training</span></label>
+      <input type="range" id="morph" min="0" max="1000" value="1000">
+      <div class="row"><button class="dbtn" id="morphPlay" type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z"/></svg>Play the change</button></div>
+    </div>
+    <p id="nnStat"></p>
+    <div style="display:grid;gap:8px">
+      <label class="check"><input type="checkbox" id="lSeen" checked><span class="dot seen"></span>Training and validation diseases (128)</label>
+      <label class="check"><input type="checkbox" id="lUnseen" checked><span class="dot unseen"></span>Never-seen diseases (70)</label>
+    </div>
+    <div style="display:grid;gap:6px">
+      <label class="lbl" for="find">Find a disease</label>
+      <input class="search" id="find" list="diseases" placeholder="Type a disease name, e.g. Psoriasis" autocomplete="off">
+      <datalist id="diseases"></datalist>
+    </div>
+    <div class="focus-card" id="focusCard" hidden>
+      <span class="lbl" id="fKind"></span>
+      <b id="fName"></b>
+      <span class="status" id="fSpread"></span>
+      <div class="strip" id="fStrip"></div>
+      <div class="row"><button class="dbtn" id="fClear" type="button">Show everything</button></div>
+    </div>
+  </section>
+
+  <!-- LAB -->
+  <section class="panel" id="pLab" role="tabpanel" aria-labelledby="tabLab" hidden>
+    <h2>Five diseases it has never seen</h2>
+    <p>Each round is one of the report's 600 fixed test episodes. The model averages each disease's example photos into a prototype and labels a new photo by its nearest prototype, using real 512-d distances.</p>
+    <div class="row">
+      <div class="seg" role="group" aria-label="Examples per disease"><button type="button" id="k1" aria-pressed="false">1 each</button><button type="button" id="k5" aria-pressed="true">5 each</button></div>
+      <div class="seg" role="group" aria-label="Model"><button type="button" id="mFt" aria-pressed="true">Trained</button><button type="button" id="mFz" aria-pressed="false">ImageNet only</button></div>
+    </div>
+    <div class="row"><button class="dbtn" id="deal" type="button">Deal next episode</button><span class="status" id="epLabel"></span></div>
+    <div class="sup" id="sup"></div>
+    <div class="hr"></div>
+    <div style="display:grid;gap:6px">
+      <span class="lbl">Query photo comes from</span>
+      <div class="seg" role="group" aria-label="Query source"><button type="button" id="srcTest" aria-pressed="true">Test set (precomputed)</button><button type="button" id="srcLive" aria-pressed="false">Live model</button></div>
+      <span class="status" id="liveHealth"></span>
+    </div>
+    <div id="liveBox" hidden style="display:grid;gap:10px">
+      <label class="drop" id="drop" for="file">Drop a photo here, or click to choose one
+        <span class="note">It goes to the model running on this computer and nowhere else.</span>
+      </label>
+      <input type="file" id="file" accept="image/*" hidden>
+      <div class="row"><button class="dbtn" id="liveRandom" type="button">Embed a random test photo live</button></div>
+      <p class="status" id="liveStatus" aria-live="polite"></p>
+    </div>
+    <div class="qcard">
+      <div class="th" id="qThumb" role="img" aria-label="Query photo"></div>
+      <div style="display:grid;gap:6px;min-width:0"><p class="truth">Actually<b id="qTruth"></b></p><p class="verdict" id="verdict" aria-live="polite"></p></div>
+    </div>
+    <div class="bars" id="bars" aria-label="Squared distance to each prototype"></div>
+    <p class="note">Bar length is squared distance to each prototype (shorter is closer); the percentage is the model's softmax over those distances.</p>
+    <div class="row"><button class="dbtn amber" id="next" type="button">Next photo</button><button class="dbtn" id="runAll" type="button">Score all 600 episodes</button></div>
+    <p class="status" id="tally"></p>
+    <p class="status" id="runAllOut" aria-live="polite"></p>
+  </section>
+</aside>
+
+<div class="caption" id="caption" aria-live="polite"><span class="k" id="capK"></span><h2 id="capH"></h2><p id="capP"></p></div>
+<div class="tip" id="tip" hidden><div class="th" id="tipThumb"></div><div><b id="tipName"></b><small id="tipKind"></small></div></div>
+<p class="disclaim">Research demo on SD-198. Not a diagnostic tool.</p>
+<p class="present-hint" id="presentHint">Presenting. Space pauses, arrows step, P or Esc leaves.</p>
+
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/proto.js"></script>
+<script src="assets/galaxy.js"></script>
+<script src="assets/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+device=cuda amp=bf16 {'model': 'imagenet_frozen'}
+  5-way 1-shot: acc 62.65 +- 1.10   macro-F1 59.85 +- 1.20   (12s)
+  5-way 5-shot: acc 80.22 +- 0.85   macro-F1 79.44 +- 0.89   (19s)
+  2-way 1-shot: acc 81.40 +- 1.38   macro-F1 79.89 +- 1.55   (3s)
+  2-way 5-shot: acc 91.70 +- 0.95   macro-F1 91.38 +- 1.00   (5s)
+wrote results/frozen_test.json
+device=cuda amp=bf16 steps=5000 warmup=500 train: 101 classes / 4428 images  val: 27 classes / 1191 images
+step 25/5000  loss 1.1016  acc 65.0  scale 10.01  258 img/s
+step 50/5000  loss 1.0121  acc 67.8  scale 10.03  2211 img/s
+step 75/5000  loss 0.8394  acc 74.0  scale 10.06  2196 img/s
+step 100/5000  loss 0.7347  acc 75.6  scale 10.10  2153 img/s
+step 125/5000  loss 0.6408  acc 77.8  scale 10.15  2204 img/s
+step 150/5000  loss 0.5552  acc 80.3  scale 10.21  2103 img/s
+step 175/5000  loss 0.4951  acc 82.2  scale 10.27  1470 img/s
+step 200/5000  loss 0.4480  acc 84.3  scale 10.34  1767 img/s
+step 225/5000  loss 0.4151  acc 86.1  scale 10.42  1923 img/s
+step 250/5000  loss 0.3563  acc 87.1  scale 10.51  1813 img/s
+  [val] step 250: acc 78.23 +- 0.68  * best
+step 275/5000  loss 0.3394  acc 87.9  scale 10.61  185 img/s
+step 300/5000  loss 0.2987  acc 89.5  scale 10.73  2172 img/s
+step 325/5000  loss 0.2618  acc 91.1  scale 10.86  2203 img/s
+step 350/5000  loss 0.2477  acc 91.6  scale 11.01  2195 img/s
+step 375/5000  loss 0.2105  acc 92.9  scale 11.16  2199 img/s
+step 400/5000  loss 0.1914  acc 93.6  scale 11.33  1743 img/s
+step 425/5000  loss 0.1742  acc 94.1  scale 11.51  1462 img/s
+step 450/5000  loss 0.1439  acc 95.4  scale 11.69  1232 img/s
+step 475/5000  loss 0.1153  acc 96.3  scale 11.87  1656 img/s
+step 500/5000  loss 0.1206  acc 96.0  scale 12.07  2187 img/s
+  [val] step 500: acc 77.72 +- 0.66
+step 525/5000  loss 0.1161  acc 95.8  scale 12.26  208 img/s
+step 550/5000  loss 0.1129  acc 96.1  scale 12.42  2201 img/s
+step 575/5000  loss 0.0839  acc 97.2  scale 12.60  2198 img/s
+step 600/5000  loss 0.0741  acc 97.6  scale 12.78  2172 img/s
+step 625/5000  loss 0.0823  acc 97.4  scale 12.97  2201 img/s
+step 650/5000  loss 0.0728  acc 97.7  scale 13.14  2167 img/s
+step 675/5000  loss 0.0572  acc 98.3  scale 13.30  2128 img/s
+step 700/5000  loss 0.0594  acc 98.1  scale 13.47  1895 img/s
+step 725/5000  loss 0.0554  acc 98.2  scale 13.63  1689 img/s
+step 750/5000  loss 0.0412  acc 98.8  scale 13.79  1663 img/s
+  [val] step 750: acc 76.49 +- 0.68
+step 775/5000  loss 0.0401  acc 98.8  scale 13.94  170 img/s
+step 800/5000  loss 0.0324  acc 99.1  scale 14.09  2175 img/s
+step 825/5000  loss 0.0380  acc 98.8  scale 14.24  2164 img/s
+step 850/5000  loss 0.0404  acc 98.7  scale 14.37  2175 img/s
+step 875/5000  loss 0.0289  acc 99.2  scale 14.51  2197 img/s
+step 900/5000  loss 0.0398  acc 98.8  scale 14.64  2191 img/s
+step 925/5000  loss 0.0476  acc 98.3  scale 14.78  1806 img/s
+step 950/5000  loss 0.0395  acc 98.5  scale 14.91  1238 img/s
+step 975/5000  loss 0.0357  acc 98.8  scale 15.03  1736 img/s
+step 1000/5000  loss 0.0343  acc 98.9  scale 15.16  1443 img/s
+  [val] step 1000: acc 75.04 +- 0.68
+step 1025/5000  loss 0.0266  acc 99.2  scale 15.28  212 img/s
+step 1050/5000  loss 0.0245  acc 99.2  scale 15.39  2187 img/s
+step 1075/5000  loss 0.0264  acc 99.3  scale 15.50  2198 img/s
+step 1100/5000  loss 0.0240  acc 99.4  scale 15.60  2159 img/s
+step 1125/5000  loss 0.0250  acc 99.2  scale 15.70  2175 img/s
+step 1150/5000  loss 0.0226  acc 99.3  scale 15.79  1852 img/s
+step 1175/5000  loss 0.0275  acc 99.2  scale 15.89  1493 img/s
+step 1200/5000  loss 0.0205  acc 99.5  scale 16.00  1570 img/s
+step 1225/5000  loss 0.0192  acc 99.5  scale 16.10  2014 img/s
+step 1250/5000  loss 0.0245  acc 99.2  scale 16.21  1795 img/s
+  [val] step 1250: acc 74.83 +- 0.67
+step 1275/5000  loss 0.0213  acc 99.3  scale 16.32  189 img/s
+step 1300/5000  loss 0.0187  acc 99.4  scale 16.41  2198 img/s
+step 1325/5000  loss 0.0180  acc 99.5  scale 16.51  2200 img/s
+step 1350/5000  loss 0.0198  acc 99.3  scale 16.60  2173 img/s
+step 1375/5000  loss 0.0149  acc 99.6  scale 16.69  2144 img/s
+step 1400/5000  loss 0.0215  acc 99.3  scale 16.76  2190 img/s
+step 1425/5000  loss 0.0139  acc 99.6  scale 16.85  2189 img/s
+step 1450/5000  loss 0.0162  acc 99.4  scale 16.95  1221 img/s
+step 1475/5000  loss 0.0150  acc 99.5  scale 17.02  1674 img/s
+step 1500/5000  loss 0.0184  acc 99.4  scale 17.11  1844 img/s
+  [val] step 1500: acc 73.82 +- 0.70

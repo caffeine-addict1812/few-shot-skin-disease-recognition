@@ -1,0 +1,228 @@
+{
+  "full": {
+    "threshold": null,
+    "images": 965,
+    "classes": 70,
+    "removed_images": 0,
+    "dropped_classes": [],
+    "results": {
+      "5way_1shot": {
+        "frozen": 62.73,
+        "seed42": 70.66,
+        "seed43": 70.71,
+        "seed44": 70.69,
+        "finetuned_mean": 70.68,
+        "finetuned_ci95": 1.02,
+        "gain": 7.96
+      },
+      "5way_5shot": {
+        "frozen": 80.21,
+        "seed42": 85.79,
+        "seed43": 85.87,
+        "seed44": 85.82,
+        "finetuned_mean": 85.83,
+        "finetuned_ci95": 0.74,
+        "gain": 5.62
+      },
+      "2way_1shot": {
+        "frozen": 81.32,
+        "seed42": 86.28,
+        "seed43": 86.47,
+        "seed44": 86.47,
+        "finetuned_mean": 86.41,
+        "finetuned_ci95": 1.22,
+        "gain": 5.09
+      },
+      "2way_5shot": {
+        "frozen": 91.7,
+        "seed42": 94.5,
+        "seed43": 94.7,
+        "seed44": 94.42,
+        "finetuned_mean": 94.54,
+        "finetuned_ci95": 0.72,
+        "gain": 2.84
+      }
+    }
+  },
+  "cos>0.95": {
+    "threshold": 0.95,
+    "images": 933,
+    "classes": 69,
+    "removed_images": 32,
+    "dropped_classes": [
+      "Stomatitis"
+    ],
+    "results": {
+      "5way_1shot": {
+        "frozen": 61.15,
+        "seed42": 69.32,
+        "seed43": 69.43,
+        "seed44": 69.28,
+        "finetuned_mean": 69.34,
+        "finetuned_ci95": 0.97,
+        "gain": 8.19
+      },
+      "5way_5shot": {
+        "frozen": 79.59,
+        "seed42": 85.45,
+        "seed43": 85.37,
+        "seed44": 85.45,
+        "finetuned_mean": 85.43,
+        "finetuned_ci95": 0.75,
+        "gain": 5.84
+      },
+      "2way_1shot": {
+        "frozen": 81.87,
+        "seed42": 87.0,
+        "seed43": 87.17,
+        "seed44": 87.1,
+        "finetuned_mean": 87.09,
+        "finetuned_ci95": 1.19,
+        "gain": 5.22
+      },
+      "2way_5shot": {
+        "frozen": 92.23,
+        "seed42": 94.97,
+        "seed43": 95.1,
+        "seed44": 94.9,
+        "finetuned_mean": 94.99,
+        "finetuned_ci95": 0.72,
+        "gain": 2.76
+      }
+    }
+  },
+  "cos>0.9": {
+    "threshold": 0.9,
+    "images": 616,
+    "classes": 49,
+    "removed_images": 349,
+    "dropped_classes": [
+      "Acrokeratosis_Verruciformis",
+      "Actinic_solar_Damage(Actinic_Cheilitis)",
+      "Balanitis_Xerotica_Obliterans",
+      "Cafe_Au_Lait_Macule",
+      "Chalazion",
+      "Cutis_Marmorata",
+      "Follicular_Retention_Cyst",
+      "Fordyce_Spots",
+      "Ganglion",
+      "Histiocytosis_X",
+      "Kyrle's_Disease",
+      "Linear_Epidermal_Nevus",
+      "Lymphangioma_Circumscriptum",
+      "Nail_Ridging",
+      "Pomade_Acne",
+      "Racquet_Nail",
+      "Scarring_Alopecia",
+      "Stomatitis",
+      "Trichilemmal_Cyst",
+      "Trichostasis_Spinulosa",
+      "Urticaria"
+    ],
+    "results": {
+      "5way_1shot": {
+        "frozen": 55.37,
+        "seed42": 63.33,
+        "seed43": 63.67,
+        "seed44": 63.41,
+        "finetuned_mean": 63.47,
+        "finetuned_ci95": 0.99,
+        "gain": 8.1
+      },
+      "5way_5shot": {
+        "frozen": 74.72,
+        "seed42": 80.97,
+        "seed43": 81.2,
+        "seed44": 80.75,
+        "finetuned_mean": 80.97,
+        "finetuned_ci95": 0.78,
+        "gain": 6.25
+      },
+      "2way_1shot": {
+        "frozen": 77.1,
+        "seed42": 83.47,
+        "seed43": 83.43,
+        "seed44": 83.3,
+        "finetuned_mean": 83.4,
+        "finetuned_ci95": 1.31,
+        "gain": 6.3
+      },
+      "2way_5shot": {
+        "frozen": 89.58,
+        "seed42": 93.07,
+        "seed43": 93.33,
+        "seed44": 93.25,
+        "finetuned_mean": 93.22,
+        "finetuned_ci95": 0.78,
+        "gain": 3.63
+      }
+    }
+  },
+  "cos>0.9_classes_all_images": {
+    "threshold": 0.9,
+    "images": 703,
+    "classes": 49,
+    "removed_images": 262,
+    "dropped_classes": [
+      "Acrokeratosis_Verruciformis",
+      "Actinic_solar_Damage(Actinic_Cheilitis)",
+      "Balanitis_Xerotica_Obliterans",
+      "Cafe_Au_Lait_Macule",
+      "Chalazion",
+      "Cutis_Marmorata",
+      "Follicular_Retention_Cyst",
+      "Fordyce_Spots",
+      "Ganglion",
+      "Histiocytosis_X",
+      "Kyrle's_Disease",
+      "Linear_Epidermal_Nevus",
+      "Lymphangioma_Circumscriptum",
+      "Nail_Ridging",
+      "Pomade_Acne",
+      "Racquet_Nail",
+      "Scarring_Alopecia",
+      "Stomatitis",
+      "Trichilemmal_Cyst",
+      "Trichostasis_Spinulosa",
+      "Urticaria"
+    ],
+    "results": {
+      "5way_1shot": {
+        "frozen": 57.21,
+        "seed42": 64.63,
+        "seed43": 64.71,
+        "seed44": 64.68,
+        "finetuned_mean": 64.67,
+        "finetuned_ci95": 0.98,
+        "gain": 7.46
+      },
+      "5way_5shot": {
+        "frozen": 75.73,
+        "seed42": 81.85,
+        "seed43": 81.57,
+        "seed44": 81.78,
+        "finetuned_mean": 81.73,
+        "finetuned_ci95": 0.74,
+        "gain": 6.01
+      },
+      "2way_1shot": {
+        "frozen": 78.22,
+        "seed42": 84.18,
+        "seed43": 84.08,
+        "seed44": 84.2,
+        "finetuned_mean": 84.16,
+        "finetuned_ci95": 1.25,
+        "gain": 5.94
+      },
+      "2way_5shot": {
+        "frozen": 90.57,
+        "seed42": 94.08,
+        "seed43": 93.97,
+        "seed44": 93.98,
+        "finetuned_mean": 94.01,
+        "finetuned_ci95": 0.74,
+        "gain": 3.44
+      }
+    }
+  }
+}

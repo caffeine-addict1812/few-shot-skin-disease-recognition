@@ -1,0 +1,7 @@
+{
+  "steps": 1000,
+  "best_val": 79.26666839599609,
+  "final_train_loss": 0.1732882857322693,
+  "wall_clock_s": 675.1075193881989,
+  "device": "NVIDIA GeForce RTX 4090"
+}

@@ -1,0 +1,14 @@
+torch>=2.2
+torchvision>=0.17
+numpy
+scikit-learn
+matplotlib
+tqdm
+pillow
+pandas
+huggingface_hub
+pytest
+jupyter
+nbformat
+nbconvert
+ipykernel

@@ -1,0 +1,45 @@
+# environment and caches
+.venv/
+__pycache__/
+.pytest_cache/
+*.ipynb_checkpoints
+
+# editor / AI-tool folders (design-checker plugin copies, personal settings)
+.agent/
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.hermes/
+.impeccable/
+.kiro/
+.opencode/
+.pi/
+.qoder/
+.rovodev/
+.vibe/
+
+# dataset: download with scripts/download_data.py (pinned by sha256)
+data/
+
+# model weights: backed up on Google Drive (vast-backup/<instance id>/runs)
+*.pt
+
+# large generated artifacts; each is rebuilt by the script named above it
+# scripts/verify_claims.py, scripts/embed_all.py, scripts/build_showcase.py
+results/*.npz
+# src/viz.py via the notebook
+results/figures/
+# scripts/build_showcase.py
+site/assets/data.js
+site/assets/thumbs.jpg
+# copies made by scripts/build_site.py
+site/assets/report.pdf
+site/assets/notebook.ipynb
+# third-party three.js r149 (MIT), fetched from jsdelivr
+site/assets/vendor/
+# scripts/build_pdf.sh
+report.pdf
+# 10 MB with outputs; scripts/build_notebook.py regenerates it
+notebook.ipynb

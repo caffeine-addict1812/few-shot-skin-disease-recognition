@@ -1,0 +1,7 @@
+{
+  "steps": 125,
+  "best_val": 78.0266683959961,
+  "final_train_loss": 0.3655432164669037,
+  "wall_clock_s": 81.76597714424133,
+  "device": "NVIDIA GeForce RTX 3090"
+}

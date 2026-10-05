@@ -1,0 +1,69 @@
+device=cuda amp=bf16 steps=1000 warmup=100 train: 101 classes / 4428 images  val: 27 classes / 1191 images
+step 25/1000  loss 1.1232  acc 64.1  scale 10.03  267 img/s
+step 50/1000  loss 1.0695  acc 66.9  scale 10.13  2158 img/s
+  [val] step 50: acc 71.65 +- 0.76  * best
+step 75/1000  loss 0.9648  acc 69.0  scale 10.30  727 img/s
+step 100/1000  loss 0.8611  acc 72.7  scale 10.53  2161 img/s
+  [val] step 100: acc 73.51 +- 0.75  * best
+step 125/1000  loss 0.7241  acc 76.3  scale 10.79  725 img/s
+step 150/1000  loss 0.6956  acc 76.1  scale 11.03  2199 img/s
+  [val] step 150: acc 75.54 +- 0.73  * best
+step 175/1000  loss 0.6132  acc 78.3  scale 11.26  726 img/s
+step 200/1000  loss 0.5933  acc 78.5  scale 11.46  2196 img/s
+  [val] step 200: acc 76.77 +- 0.72  * best
+step 225/1000  loss 0.5793  acc 79.1  scale 11.65  713 img/s
+step 250/1000  loss 0.5251  acc 81.4  scale 11.84  2188 img/s
+  [val] step 250: acc 77.40 +- 0.71  * best
+step 275/1000  loss 0.5334  acc 81.2  scale 12.00  723 img/s
+step 300/1000  loss 0.4906  acc 82.5  scale 12.17  2191 img/s
+  [val] step 300: acc 77.79 +- 0.70  * best
+step 325/1000  loss 0.4707  acc 83.6  scale 12.35  723 img/s
+step 350/1000  loss 0.4597  acc 84.0  scale 12.52  2147 img/s
+  [val] step 350: acc 78.08 +- 0.70  * best
+step 375/1000  loss 0.4396  acc 84.4  scale 12.69  721 img/s
+step 400/1000  loss 0.4360  acc 84.5  scale 12.84  2197 img/s
+  [val] step 400: acc 78.28 +- 0.69  * best
+step 425/1000  loss 0.4358  acc 84.3  scale 12.98  728 img/s
+step 450/1000  loss 0.3894  acc 85.9  scale 13.11  2173 img/s
+  [val] step 450: acc 78.22 +- 0.69
+step 475/1000  loss 0.4179  acc 84.9  scale 13.26  734 img/s
+step 500/1000  loss 0.3603  acc 87.3  scale 13.40  2198 img/s
+  [val] step 500: acc 78.37 +- 0.69  * best
+step 525/1000  loss 0.3855  acc 85.9  scale 13.50  727 img/s
+step 550/1000  loss 0.3998  acc 85.5  scale 13.61  2199 img/s
+  [val] step 550: acc 78.56 +- 0.69  * best
+step 575/1000  loss 0.3644  acc 86.9  scale 13.71  723 img/s
+step 600/1000  loss 0.3212  acc 88.4  scale 13.80  2195 img/s
+  [val] step 600: acc 78.51 +- 0.69
+step 625/1000  loss 0.3353  acc 87.8  scale 13.89  726 img/s
+step 650/1000  loss 0.3523  acc 87.0  scale 13.95  2192 img/s
+  [val] step 650: acc 78.67 +- 0.68  * best
+step 675/1000  loss 0.3581  acc 86.7  scale 14.02  717 img/s
+step 700/1000  loss 0.3707  acc 86.2  scale 14.08  2199 img/s
+  [val] step 700: acc 78.56 +- 0.69
+step 725/1000  loss 0.3311  acc 88.0  scale 14.13  737 img/s
+step 750/1000  loss 0.3273  acc 88.5  scale 14.17  2182 img/s
+  [val] step 750: acc 78.56 +- 0.68
+step 775/1000  loss 0.3227  acc 88.5  scale 14.21  731 img/s
+step 800/1000  loss 0.3551  acc 86.7  scale 14.23  2199 img/s
+  [val] step 800: acc 78.79 +- 0.68  * best
+step 825/1000  loss 0.3501  acc 87.8  scale 14.26  723 img/s
+step 850/1000  loss 0.3278  acc 87.8  scale 14.28  2181 img/s
+  [val] step 850: acc 78.75 +- 0.68
+step 875/1000  loss 0.3355  acc 87.3  scale 14.29  729 img/s
+step 900/1000  loss 0.3405  acc 87.4  scale 14.30  2199 img/s
+  [val] step 900: acc 78.81 +- 0.68  * best
+step 925/1000  loss 0.3283  acc 88.2  scale 14.31  708 img/s
+step 950/1000  loss 0.3460  acc 88.1  scale 14.31  2183 img/s
+  [val] step 950: acc 78.87 +- 0.68  * best
+step 975/1000  loss 0.3272  acc 88.3  scale 14.31  776 img/s
+step 1000/1000  loss 0.3244  acc 88.6  scale 14.31  2223 img/s
+  [val] step 1000: acc 78.83 +- 0.68
+done: 1000 steps in 6.6 min, best val 78.87
+device=cuda amp=bf16 {'ckpt': 'runs/seed43/best.pt', 'step': 950, 'val_acc': 78.86666829427084, 'seed': 43}
+  5-way 1-shot: acc 70.71 +- 1.05   macro-F1 68.64 +- 1.14   (3s)
+  5-way 5-shot: acc 85.91 +- 0.75   macro-F1 85.34 +- 0.79   (4s)
+  2-way 1-shot: acc 86.52 +- 1.23   macro-F1 85.74 +- 1.34   (1s)
+  2-way 5-shot: acc 94.65 +- 0.74   macro-F1 94.50 +- 0.77   (2s)
+wrote results/seed43_test.json
+EXIT=0

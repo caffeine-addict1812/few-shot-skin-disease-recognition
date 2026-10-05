@@ -1,0 +1,270 @@
+{
+  "splits": {
+    "counts": {
+      "train": [
+        101,
+        4428
+      ],
+      "val": [
+        27,
+        1191
+      ],
+      "test": [
+        70,
+        965
+      ]
+    },
+    "identical_groups": 3,
+    "identical_cross_split": 1,
+    "identical_examples": [
+      [
+        [
+          "train",
+          "Eczema",
+          "043855VB.jpg"
+        ],
+        [
+          "train",
+          "Eczema",
+          "043855VB1.jpg"
+        ]
+      ],
+      [
+        [
+          "train",
+          "Eczema",
+          "043940VB.jpg"
+        ],
+        [
+          "train",
+          "Eczema",
+          "043940VB2.jpg"
+        ]
+      ],
+      [
+        [
+          "val",
+          "Pityriasis_Rosea",
+          "040861VB.jpg"
+        ],
+        [
+          "test",
+          "Pityriasis_Alba",
+          "040861VB.jpg"
+        ]
+      ]
+    ]
+  },
+  "near_duplicates": {
+    "0.9": {
+      "test_imgs_with_trainval_neighbour": 217,
+      "test_pairs_same_class": 240,
+      "test_pairs_diff_class": 72
+    },
+    "0.95": {
+      "test_imgs_with_trainval_neighbour": 5,
+      "test_pairs_same_class": 23,
+      "test_pairs_diff_class": 2
+    },
+    "0.98": {
+      "test_imgs_with_trainval_neighbour": 1,
+      "test_pairs_same_class": 1,
+      "test_pairs_diff_class": 0
+    }
+  },
+  "test": {
+    "5way_1shot": {
+      "frozen": {
+        "stored": 62.64666666666667,
+        "recomputed": 62.72666666666667,
+        "episodes_differing": 54,
+        "fresh_5000": 62.5768,
+        "shuffled_labels": 19.653333333333332,
+        "bottom_masked": 61.64666666666667,
+        "top_masked": 62.03333333333333
+      },
+      "seed42": {
+        "stored": 70.70666666666666,
+        "recomputed": 70.66,
+        "episodes_differing": 53,
+        "fresh_5000": 70.292,
+        "shuffled_labels": 19.366666666666667,
+        "bottom_masked": 69.72,
+        "top_masked": 70.00666666666666
+      },
+      "seed43": {
+        "stored": 70.71333333333334,
+        "recomputed": 70.70666666666666,
+        "episodes_differing": 49,
+        "fresh_5000": 70.4216,
+        "shuffled_labels": 19.413333333333334,
+        "bottom_masked": 70.30666666666667,
+        "top_masked": 69.99333333333334
+      },
+      "seed44": {
+        "stored": 70.72,
+        "recomputed": 70.68666666666667,
+        "episodes_differing": 60,
+        "fresh_5000": 70.248,
+        "shuffled_labels": 19.513333333333332,
+        "bottom_masked": 70.09333333333333,
+        "top_masked": 70.03333333333333
+      },
+      "gain_vs_frozen": {
+        "mean": 7.9577777777777765,
+        "boot_ci95": [
+          7.088888888888887,
+          8.806666666666665
+        ],
+        "wins": 449,
+        "ties": 22,
+        "losses": 129
+      }
+    },
+    "5way_5shot": {
+      "frozen": {
+        "stored": 80.22,
+        "recomputed": 80.20666666666666,
+        "episodes_differing": 23,
+        "fresh_5000": 80.3888,
+        "shuffled_labels": 19.56,
+        "bottom_masked": 80.24666666666667,
+        "top_masked": 80.27333333333333
+      },
+      "seed42": {
+        "stored": 85.82,
+        "recomputed": 85.78666666666666,
+        "episodes_differing": 24,
+        "fresh_5000": 85.9632,
+        "shuffled_labels": 19.66,
+        "bottom_masked": 85.28,
+        "top_masked": 85.30666666666667
+      },
+      "seed43": {
+        "stored": 85.91333333333333,
+        "recomputed": 85.87333333333333,
+        "episodes_differing": 25,
+        "fresh_5000": 85.96,
+        "shuffled_labels": 19.64,
+        "bottom_masked": 85.22,
+        "top_masked": 85.10666666666667
+      },
+      "seed44": {
+        "stored": 85.83333333333333,
+        "recomputed": 85.82,
+        "episodes_differing": 26,
+        "fresh_5000": 85.7832,
+        "shuffled_labels": 19.666666666666668,
+        "bottom_masked": 85.02666666666667,
+        "top_masked": 85.28666666666666
+      },
+      "gain_vs_frozen": {
+        "mean": 5.62,
+        "boot_ci95": [
+          4.955555555555556,
+          6.266722222222222
+        ],
+        "wins": 422,
+        "ties": 62,
+        "losses": 116
+      }
+    },
+    "2way_1shot": {
+      "frozen": {
+        "stored": 81.4,
+        "recomputed": 81.31666666666666,
+        "episodes_differing": 13,
+        "fresh_5000": 81.84,
+        "shuffled_labels": 49.31666666666667,
+        "bottom_masked": 80.78333333333333,
+        "top_masked": 81.16666666666667
+      },
+      "seed42": {
+        "stored": 86.23333333333333,
+        "recomputed": 86.28333333333333,
+        "episodes_differing": 12,
+        "fresh_5000": 87.306,
+        "shuffled_labels": 49.083333333333336,
+        "bottom_masked": 86.18333333333334,
+        "top_masked": 85.93333333333334
+      },
+      "seed43": {
+        "stored": 86.51666666666667,
+        "recomputed": 86.46666666666667,
+        "episodes_differing": 13,
+        "fresh_5000": 87.352,
+        "shuffled_labels": 49.233333333333334,
+        "bottom_masked": 86.31666666666666,
+        "top_masked": 86.23333333333333
+      },
+      "seed44": {
+        "stored": 86.4,
+        "recomputed": 86.46666666666667,
+        "episodes_differing": 10,
+        "fresh_5000": 87.34,
+        "shuffled_labels": 49.36666666666667,
+        "bottom_masked": 86.4,
+        "top_masked": 86.15
+      },
+      "gain_vs_frozen": {
+        "mean": 5.088888888888889,
+        "boot_ci95": [
+          3.9166666666666665,
+          6.311249999999999
+        ],
+        "wins": 276,
+        "ties": 185,
+        "losses": 139
+      }
+    },
+    "2way_5shot": {
+      "frozen": {
+        "stored": 91.7,
+        "recomputed": 91.7,
+        "episodes_differing": 8,
+        "fresh_5000": 92.206,
+        "shuffled_labels": 49.96666666666667,
+        "bottom_masked": 91.73333333333333,
+        "top_masked": 91.4
+      },
+      "seed42": {
+        "stored": 94.5,
+        "recomputed": 94.5,
+        "episodes_differing": 4,
+        "fresh_5000": 94.968,
+        "shuffled_labels": 49.46666666666667,
+        "bottom_masked": 94.4,
+        "top_masked": 93.96666666666667
+      },
+      "seed43": {
+        "stored": 94.65,
+        "recomputed": 94.7,
+        "episodes_differing": 5,
+        "fresh_5000": 94.98,
+        "shuffled_labels": 49.5,
+        "bottom_masked": 94.46666666666667,
+        "top_masked": 94.1
+      },
+      "seed44": {
+        "stored": 94.43333333333334,
+        "recomputed": 94.41666666666667,
+        "episodes_differing": 7,
+        "fresh_5000": 94.914,
+        "shuffled_labels": 49.31666666666667,
+        "bottom_masked": 94.31666666666666,
+        "top_masked": 94.05
+      },
+      "gain_vs_frozen": {
+        "mean": 2.838888888888889,
+        "boot_ci95": [
+          2.0833333333333335,
+          3.6
+        ],
+        "wins": 187,
+        "ties": 327,
+        "losses": 86
+      }
+    }
+  },
+  "failures": []
+}
