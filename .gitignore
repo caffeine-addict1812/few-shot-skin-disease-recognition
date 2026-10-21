@@ -43,3 +43,8 @@ site/assets/vendor/
 report.pdf
 # 10 MB with outputs; scripts/build_notebook.py regenerates it
 notebook.ipynb
+
+# Training outputs and logs
+runs/
+logs_vm/
+checkpoints/
